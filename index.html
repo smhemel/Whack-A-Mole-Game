@@ -10,7 +10,8 @@
 
 <body>
 
-  <h1>Whack-a-mole!</h1>
+  <h1>Cautch The Animal</h1>
+  <h2>Your time is 20 Second</h2>
   <h2>Score:
     <span class="score">0</span>
   </h2>
@@ -76,7 +77,10 @@
       timeUp = false;
       score = 0;
       peep();
-      setTimeout(() => timeUp = true, 10000)
+      setTimeout(() => {
+        alert(`Your score is ${score}\nGAME OVER!!!`);
+        timeUp = true;
+      }, 20000)
     }
 
     function bonk(e) {
